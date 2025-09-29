@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My first HTML Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysia Education Completion Rates by State</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Heading 1</h1>
-    <p>My first paragraph.</p>
+  <main>
+    <h1>Malaysia Education Completion Rates by State (2022)</h1>
+    <div id="choropleth_map"></div>
+  </main>
+  <script type="text/javascript">
+    const spec = "js/malaysia_education.json";
+    vegaEmbed('#choropleth_map', spec, { actions: false }).catch(console.error);
+  </script>
 </body>
 </html>
